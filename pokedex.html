@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="module" src="./src/index.js"></script>
+    <link rel="stylesheet" href="./css/index.css" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <!-- SECCION DE BUSQUEDA ! -->
+    <section class="searcher">
+      <header>
+        <h1>PokédeX</h1>
+      </header>
+
+      <form>
+        <input type="text" placeholder="Search your pokemon" />
+        <button type="submit" class="search-btn">Search Pokemon</button>
+      </form>
+
+      <ul>
+        <li>pokemon</li>
+        <li>pokemon</li>
+        <li>pokemon</li>
+        <li>pokemon</li>
+        <li>pokemon</li>
+        <li>pokemon</li>
+      </ul>
+    </section>
+
+    <!-- SECCION DE APARICION DE POKEMON! -->
+    <section class="show-pokemon">
+      <div>
+        <button class="back-search">← Back to search</button>
+        <h3>pokemon Name</h3>
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Pokebola-pokeball-png-0.png/800px-Pokebola-pokeball-png-0.png"
+          alt="pokemon"
+        />
+      </div>
+      <article class="info">
+        <div class="types">
+          <ul>
+            <li><h2>ELECTRICO</h2></li>
+            <li><h2>TIERRA</h2></li>
+          </ul>
+        </div>
+        <div class="measure"></div>
+      </article>
+
+      <table>
+        <tbody>
+          <tr>
+            <td class="title-stat">HP</td>
+            <td class="stat">10</td>
+            <td class="max-stat"><div id="hp"></div></td>
+          </tr>
+          <tr>
+            <td class="title-stat">ATACK</td>
+            <td class="stat">10</td>
+            <td class="max-stat"><div id="atack"></div></td>
+          </tr>
+          <tr>
+            <td class="title-stat">DEFENSE</td>
+            <td class="stat">10</td>
+            <td class="max-stat"><div id="defense"></div></td>
+          </tr>
+          <tr>
+            <td class="title-stat">SP.ATK</td>
+            <td class="stat">10</td>
+            <td class="max-stat"><div id="sp-atk"></div></td>
+          </tr>
+          <tr>
+            <td class="title-stat">SP.DEF</td>
+            <td class="stat">10</td>
+            <td class="max-stat"><div id="sp-def"></div></td>
+          </tr>
+          <tr>
+            <td class="title-stat">SPEED</td>
+            <td class="stat">10</td>
+            <td class="max-stat"><div id="speed"></div></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </body>
+</html>
