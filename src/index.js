@@ -1,10 +1,13 @@
-const peticion = async () => {
-  try {
-    const peticion = await fetch("https://pokeapi.co/api/v2/pokemon/pikachu");
-    const respuesta = await peticion.json();
+import renderPokemon from "./renderPokemon.js";
+import searcher from "./searcher.js";
+import selector from "./selector.js";
 
-    console.log(respuesta);
-  } catch (err) {}
-};
+document.addEventListener("submit", (e) => {
+  e.preventDefault();
+  renderPokemon();
+});
 
-// peticion();
+document.addEventListener("DOMContentLoaded", (e) => {
+  searcher();
+  selector();
+});
