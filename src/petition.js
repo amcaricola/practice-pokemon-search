@@ -1,11 +1,11 @@
 const petition = async (url) => {
   try {
-    const peticion = await fetch(url);
-    const respuesta = await peticion.json();
-    return respuesta;
+    const peticion = await fetch(url)
+    const respuesta = await peticion.json()
+    return respuesta
   } catch (err) {
-    return err;
+    return err
   }
-};
+}
 
-export default petition;
+export default petition

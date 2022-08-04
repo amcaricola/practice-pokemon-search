@@ -11,12 +11,28 @@ body {
   display: flex;
   width: 100%;
   font-family: Arial, Helvetica, sans-serif;
+  justify-content: center;
+  background-image: url("../img/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+html,
+body {
+  width: 100% !important;
+  overflow-x: hidden !important;
 }
 
 section {
-  width: 50vw;
+  background-color: var(--white);
+  max-width: 600px;
+  width: 100vw;
   height: 100vh;
   border-right: thin solid var(--black);
+  border-left: thin solid var(--black);
+}
+
+.searcher{
+  position: relative;
 }
 
 .searcher header {
@@ -89,6 +105,10 @@ section {
   background-color: var(--red);
 }
 
+.show-pokemon {
+  display: none;
+}
+
 .show-pokemon div {
   width: 100%;
   text-align: center;
@@ -133,6 +153,11 @@ section {
   width: 30%;
   border-top-left-radius: 30px;
   border-bottom-left-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+
 }
 .types {
   display: flex;
@@ -140,15 +165,19 @@ section {
   align-items: center;
 }
 
+
 .show-pokemon div ul {
   list-style: none;
-  padding: 0;
   width: 80%;
-  margin-left: auto;
-  margin-right: auto;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 .show-pokemon div ul li {
+  width: 80%;
   margin-bottom: 15px;
   background-color: var(--red);
   border-radius: 50px;
@@ -158,11 +187,10 @@ section {
 }
 
 .measure h5 {
+  margin: 0;
   color: var(--white);
   text-align: start;
   width: 80%;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 table {
@@ -203,4 +231,59 @@ table tbody tr {
   width: 20%;
   background-color: #f9564f;
   height: 18px;
+}
+
+.loader{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: #00000090;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+}
+
+@media (max-height: 800px) {
+  
+  body{
+    height: 100%;
+  }
+  
+  section{
+    height: 100%;
+  }
+
+  .searcher form{
+    padding: 20px 0;
+  }
+  
+  .show-pokemon .back-search{
+    height: 50px;
+    font-size: 1.4rem;
+  }
+  
+  .show-pokemon div h3 {
+    margin: 0;
+  }
+  .show-pokemon div img{
+    height: 25vh;
+  }
+}
+
+@media (max-width: 800px) {
+  
+  .show-pokemon article .measure{
+    font-size: 0.8rem;
+  }
+
+  .show-pokemon div ul li  {
+    font-size: 1.2rem;
+    height: 30px;
+    display: grid;
+    align-items: center;
+  }
+
 }
